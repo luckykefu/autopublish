@@ -8,7 +8,7 @@ from src.log import logger
 from .load_cookies import load_cookies
 from .init_browser import init_browser
 
-logger.info(__file__)
+
 platform = "blbl"
 url = "https://www.bilibili.com/"
 

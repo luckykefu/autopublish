@@ -9,7 +9,7 @@ from .load_cookies import load_cookies
 from .init_browser import init_browser
 
 # Get current script name
-logger.info(__file__)
+
 platform = "zhihu"
 url = "https://www.zhihu.com/"
 

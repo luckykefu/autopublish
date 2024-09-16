@@ -8,7 +8,7 @@ from playwright.async_api import async_playwright
 import os
 from src.log import logger
 
-logger.info(__file__)
+
 platform = "bjh"
 url = "https://baijiahao.baidu.com/"
 

@@ -8,7 +8,7 @@ import json
 from .load_cookies import load_cookies
 from .init_browser import init_browser
 
-logger.info(__file__)
+
 platform = "weibo"
 url = "https://weibo.com/upload/channel"
 

@@ -9,7 +9,7 @@ from src.log import logger
 from .init_browser import init_browser
 from .load_cookies import load_cookies
 
-logger.info(__file__)
+
 platform = "ks"
 url = "https://cp.kuaishou.com/article/publish/video"
 

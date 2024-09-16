@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-logger.info(__file__)
+
 
 with gr.Blocks() as demo:
     gr.Markdown("# Video Publish")

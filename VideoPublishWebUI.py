@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-logger.info(__file__)
+
 
 with gr.Blocks() as demo:
     gr.Markdown("# Video Publish")
@@ -115,18 +115,20 @@ with gr.Blocks() as demo:
     )
 
 
-parser = argparse.ArgumentParser(description="Demo")
-parser.add_argument("--server_name", type=str, default="localhost", help="server name")
-parser.add_argument("--server_port", type=int, default=8080, help="server port")
-parser.add_argument("--root_path", type=str, default=None, help="root path")
-args = parser.parse_args()
 
 
-demo.launch(
-    server_name=args.server_name,
-    server_port=args.server_port,
-    root_path=args.root_path,
-    show_api=False,
-)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Demo")
+    parser.add_argument("--server_name", type=str, default="localhost", help="server name")
+    parser.add_argument("--server_port", type=int, default=8080, help="server port")
+    parser.add_argument("--root_path", type=str, default=None, help="root path")
+    args = parser.parse_args()
+    demo.launch(
+        server_name=args.server_name,
+        server_port=args.server_port,
+        root_path=args.root_path,
+        show_api=False,
+    )
 
 

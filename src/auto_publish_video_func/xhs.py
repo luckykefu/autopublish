@@ -9,7 +9,7 @@ from .load_cookies import load_cookies
 from .init_browser import init_browser
 
 # Get current script name
-logger.info(__file__)
+
 platform = "xhs"  # Fixed typo 'platfrom' to 'platform'
 url = "https://creator.xiaohongshu.com/"
 

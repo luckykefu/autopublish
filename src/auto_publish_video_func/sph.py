@@ -8,7 +8,7 @@ from src.log import logger
 from .load_cookies import load_cookies
 from .init_browser import init_browser
 
-logger.info(__file__)
+
 platform = "sph"
 url = "https://channels.weixin.qq.com/platform/post/create"
 
