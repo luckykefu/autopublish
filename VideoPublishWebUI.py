@@ -1,5 +1,4 @@
 import argparse
-import os
 from src.auto_publish_video_func.blbl import publish_to_blbl
 from src.auto_publish_video_func.xhs import publish_to_xhs
 from src.auto_publish_video_func.zhihu import publish_to_zhihu
@@ -129,3 +128,5 @@ demo.launch(
     root_path=args.root_path,
     show_api=False,
 )
+
+
