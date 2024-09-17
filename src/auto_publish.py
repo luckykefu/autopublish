@@ -1,6 +1,7 @@
 import json
 import os
-from src.log import logger
+from src.log import get_logger
+logger = get_logger(__name__)
 
 
 def save_title_description_tags(title, description, tags, output_dir="temp"):

@@ -1,10 +1,13 @@
 import os
 import shutil
 import tempfile
-from src.log import logger
+from src.log import get_logger
+
+logger = get_logger(__name__)
 
 f = os.path.basename(__file__)
 logger.info(f)
+
 
 def clear_gradio_cache():
 
@@ -12,7 +15,7 @@ def clear_gradio_cache():
     temp_dir = tempfile.gettempdir()
 
     # 构建 Gradio 缓存目录的路径
-    gradio_cache_dir = os.path.join(temp_dir, 'gradio')
+    gradio_cache_dir = os.path.join(temp_dir, "gradio")
 
     # 检查目录是否存在
     if os.path.exists(gradio_cache_dir) and os.path.isdir(gradio_cache_dir):
@@ -22,6 +25,6 @@ def clear_gradio_cache():
     else:
         logger.error(f"No Gradio cache directory found at '{gradio_cache_dir}'.")
 
-if __name__ == '__main__':
-    clear_gradio_cache()
 
+if __name__ == "__main__":
+    clear_gradio_cache()

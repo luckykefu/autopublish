@@ -1,10 +1,13 @@
-from src.auto_publish import await_load_state
+from ..auto_publish import await_load_state
+
 from .get_title_description_tags import get_title_description_tags
 from .save_cookies import save_cookies
 from playwright.async_api import async_playwright
 import os
 import json
-from src.log import logger
+from src.log import get_logger
+
+logger = get_logger(__name__)
 from .load_cookies import load_cookies
 from .init_browser import init_browser
 
@@ -24,6 +27,9 @@ async def publish_to_zhihu(video_file_path, title, description, tags, json_file_
     :param json_file_path: Path to the JSON file containing details.
     :return:
     """
+    if video_file_path is None or not os.path.exists(video_file_path):
+        logger.error(f"Video file not found: {video_file_path}")
+        return
     async with async_playwright() as p:
         # Initialize browser
         try:
@@ -114,4 +120,3 @@ async def publish_to_zhihu(video_file_path, title, description, tags, json_file_
 
         await page1.get_by_role("button", name="发布视频").click()
         logger.info("Video published successfully")
-

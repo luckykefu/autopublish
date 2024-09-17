@@ -1,6 +1,8 @@
 import json
 import os
-from src.log import logger
+from src.log import get_logger
+
+logger = get_logger(__name__)
 
 
 async def save_cookies(cookie_file, page):
@@ -12,9 +14,9 @@ async def save_cookies(cookie_file, page):
         os.makedirs(directory)
 
     logger.info("save cookies")
-    
+
     cookies = await page.context.cookies()
     with open(cookie_file, "w") as f:
         json.dump(cookies, f, indent=4)
-        
+
     logger.info("save cookies success")

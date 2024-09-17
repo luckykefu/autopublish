@@ -1,5 +1,6 @@
 import json
-from src.log import logger
+from src.log import get_logger
+logger = get_logger(__name__)
 
 def get_title_description_tags(json_file_path):
     """
