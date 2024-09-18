@@ -16,19 +16,19 @@ os.chdir(script_dir)
 ######################################################
 # TODO: xhs video publish
 
-# from src.auto_publish_video_func.xhs import publish_to_xhs
-# if __name__ == "__main__":
-#     import asyncio
+from src.auto_publish_video_func.xhs import publish_to_xhs
+if __name__ == "__main__":
+    import asyncio
 
-#     asyncio.run(
-#         publish_to_xhs(
-#             video_file_path=rf"D:\Videos\041.mp4",
-#             title=None,
-#             description=None,
-#             tags=None,
-#             json_file_path=None,
-#         )
-#     )
+    asyncio.run(
+        publish_to_xhs(
+            video_file_path=rf"D:\Videos\041.mp4",
+            title=None,
+            description=None,
+            tags=None,
+            json_file_path=None,
+        )
+    )
 
 ############################################################
 # TODO: zhihu video publish

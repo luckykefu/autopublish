@@ -5,7 +5,7 @@ from .save_cookies import save_cookies
 from playwright.async_api import async_playwright
 import os
 import json
-from src.log import get_logger
+from ..log import get_logger
 
 logger = get_logger(__name__)
 from .load_cookies import load_cookies

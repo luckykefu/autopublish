@@ -2,7 +2,7 @@ import json
 import os
 from playwright.async_api import async_playwright
 from ..auto_publish import await_load_state
-from src.log import get_logger
+from ..log import get_logger
 
 logger = get_logger(__name__)
 from .get_title_description_tags import get_title_description_tags

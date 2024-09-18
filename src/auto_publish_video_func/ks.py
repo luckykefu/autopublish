@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 import os
 import json
 import re
-from src.log import get_logger
+from ..log import get_logger
 
 logger = get_logger(__name__)
 from .init_browser import init_browser
