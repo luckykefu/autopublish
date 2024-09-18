@@ -5,9 +5,6 @@ from src.log import get_logger
 
 logger = get_logger(__name__)
 
-f = os.path.basename(__file__)
-logger.info(f)
-
 
 def clear_gradio_cache():
 
