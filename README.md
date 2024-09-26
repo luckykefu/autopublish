@@ -27,13 +27,19 @@ To use AutoPublish, you need to follow these steps:
 
 ```
 git clone https://github.com/xhs/AutoPublish.git
+
 cd AutoPublish
-pip install -r requirements.txt
+conda create -n autopublish python -y
+
+conda activate autopublish
+
+pip install colorama gradio playwright python-dotenv
+
 playwright install chromium
 
 # change the .env_example file to .env and fill in the necessary information
 cp .env_example .env
 
-python webui.py
+python VideoPublishWebUI.py
 
 ```
